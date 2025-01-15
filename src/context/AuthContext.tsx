@@ -1,5 +1,5 @@
-import React, { createContext, useState, ReactNode } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { createContext, useState, useEffect, ReactNode } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 interface User {
   email: string;
@@ -22,6 +22,19 @@ const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   });
 
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (user) {
+      if (location.pathname === '/' || location.pathname === '/login') {
+        navigate('/users', { replace: true });
+      }
+    } else {
+      if (location.pathname !== '/login') {
+        navigate('/login', { replace: true });
+      }
+    }
+  }, [user, location.pathname, navigate]);
 
   const login = (email: string, password: string) => {
     // Validación simple login
