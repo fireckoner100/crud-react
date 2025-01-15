@@ -8,7 +8,6 @@ export const getUsers = async () => {
 };
 
 export const createUser = async (user: { name: string; email: string }) => {
-  //throw new Error('Simulated error: Unable to create user');
   const response = await axios.post(API_BASE_URL, user);
   return response.data;
 };

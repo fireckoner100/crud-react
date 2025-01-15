@@ -105,18 +105,19 @@ const UserList: React.FC = () => {
           value={users}
           paginator
           rows={10}
-          filters={filters}
+          scrollable
           globalFilterFields={['name', 'email']}
-          responsiveLayout="scroll"
           stripedRows
           emptyMessage="No users found."
           className="shadow-lg rounded-lg"
+          responsiveLayout="scroll"
         >
           <Column
             field="name"
             header="Name"
             sortable
             filter
+            frozen
             filterPlaceholder="Search by name"
           />
           <Column

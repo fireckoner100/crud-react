@@ -97,7 +97,7 @@ const UserProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <>
       {/* Toast para mostrar notificaciones */}
-      <Toast ref={toast} />
+      <Toast ref={toast} position={'top-center'} />
 
       {/* Context Provider */}
       <UserContext.Provider

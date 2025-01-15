@@ -24,7 +24,7 @@ const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const navigate = useNavigate();
 
   const login = (email: string, password: string) => {
-    // Validación simple (sustituir por tu lógica real)
+    // Validación simple login
     if (email === 'admin@example.com' && password === 'password') {
       const user = { email, name: 'Admin' };
       setUser(user);

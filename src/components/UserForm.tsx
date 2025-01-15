@@ -51,7 +51,7 @@ const UserForm: React.FC<UserFormProps> = ({ initialUser, onClose }) => {
             rules={{
               required: 'Name is required',
               pattern: {
-                value: /^[a-zA-Z\s]+$/,
+                value: /^[^\d]+$/,
                 message: 'Name must not contain numbers',
               },
             }}

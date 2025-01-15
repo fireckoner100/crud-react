@@ -7,10 +7,10 @@ const NotFoundPage: React.FC = () => {
       <h1 className="text-4xl font-bold text-gray-800 mb-4">404 - Page Not Found</h1>
       <p className="text-gray-600 mb-4">The page you are looking for doesn't exist.</p>
       <Link
-        to="/login"
-        className="p-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+        to="/users"
+        className="p-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition no-underline"
       >
-        Go to Login
+        Go to Home
       </Link>
     </div>
   );
